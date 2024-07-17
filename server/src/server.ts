@@ -61,7 +61,15 @@ app.use('/proxy', async (req, res) => {
   
   
 
-
+app.post('/gemini/messages', async (req, res) => {
+    try {
+        // Make a request to the Gemini API endpoint
+        const response = await axios.post('https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=AIzaSyCcKPTQXsaiNwYDDBF5dwu89J_nAEp8GwE', req.body);
+        res.json(response.data);
+    } catch (error) {
+        res.json(error);
+    }
+});
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
