@@ -18,6 +18,7 @@
         "@uiw/react-codemirror": "^4.21.21",
         "axios": "^1.6.8",
         "codemirror": "^6.0.1",
+        "deep-chat-react": "^2.0.0",
         "file-saver": "^2.0.5",
         "gemini-client": "^1.0.1",
         "jszip": "^3.10.1",
